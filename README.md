@@ -3,7 +3,7 @@
  <br />
  Vorion
 </h1>
-<div align="center">
+<!-- <div align="center">
  <img src="https://img.shields.io/github/actions/workflow/status/SpikeHD/Dorion/build.yml" />
  <img src="https://img.shields.io/github/package-json/v/SpikeHD/Dorion" />
  <img src="https://img.shields.io/github/repo-size/SpikeHD/Dorion" />
@@ -13,7 +13,7 @@
  <img src="https://img.shields.io/github/release-date/SpikeHD/Dorion" />
  <img src="https://img.shields.io/github/stars/SpikeHD/Dorion" />
  <img src="https://img.shields.io/github/downloads/SpikeHD/Dorion/total" />
-</div>
+</div> -->
 
 <div align="center">
  Vorion is a fork of Dorion meant to integrate its own WebRTC into the app to allow voice support for Linux distros!
@@ -53,31 +53,11 @@
 <table align="center">
   <tr>
     <th>
-      <img src="docs/image/windows.png" width="30%" align="center" />
-    </th>
-    <th>
-      <img src="docs/image/apple.png" width="30%" align="center" />
-    </th>
-    <th>
       <img src="docs/image/debian.png" width="30%" align="center" />
     </th>
   </tr>
 
   <tr>
-    <td width="30%">
-      <div align="center">
-        <a href="https://nightly.link/SpikeHD/Dorion/workflows/build/main/dorion-x86_64-pc-windows-msvc-msi.zip">x86_64</a>
-        <span>|</span>
-        <a href="https://nightly.link/SpikeHD/Dorion/workflows/build/main/dorion-aarch64-pc-windows-msvc-nsis.zip">ARM</a>
-      </div>
-    </td>
-    <td width="30%">
-      <div align="center">
-        <a href="https://nightly.link/SpikeHD/Dorion/workflows/build/main/dorion-x86_64-apple-darwin-dmg.zip">x86_64</a>
-        <span>|</span>
-        <a href="https://nightly.link/SpikeHD/Dorion/workflows/build/main/dorion-aarch64-apple-darwin-dmg.zip">ARM</a>
-      </div>
-    </td>
     <td width="30%">
       <div align="center">
         <a href="https://nightly.link/SpikeHD/Dorion/workflows/build/main/dorion-x86_64-unknown-linux-gnu-deb.zip">x86_64</a>
@@ -93,7 +73,7 @@
 </details>
 
 > [!TIP]
-> You can find portable builds in the [releases](https://github.com/SpikeHD/dorion/releases/latest/) page. You can also [build](#building) Vorion yourself
+> You can find portable builds in the [releases](https://github.com/SpikeHD/dorion/releases/latest/) page. You can also [build](#building) Vorion yourself)
 
 # Table of Contents
 
