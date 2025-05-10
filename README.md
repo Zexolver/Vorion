@@ -1,7 +1,7 @@
 <h1 align="center">
  <img height="100px" src="https://raw.githubusercontent.com/SpikeHD/Dorion/main/src-tauri/icons/icon.png" />
  <br />
- Dorion
+ Vorion
 </h1>
 <div align="center">
  <img src="https://img.shields.io/github/actions/workflow/status/SpikeHD/Dorion/build.yml" />
@@ -16,9 +16,9 @@
 </div>
 
 <div align="center">
- Dorion is an alternative Discord client aimed towards lower-spec or storage-sensitive PCs that supports themes, plugins, and more!
+ Vorion is a fork of Dorion meant to integrate its own WebRTC into the app to allow voice support for Linux distros!
  <br />
- https://discord.gg/agQ9mRdHMZ
+ https://discord.gg/agQ9mRdHMZ  -  Original Dorion Discord server (There is no Vorion server
 </div>
 
 # Download
@@ -26,31 +26,11 @@
 <table align="center">
   <tr>
     <th>
-      <img src="docs/image/windows.png" width="30%" align="center" />
-    </th>
-    <th>
-      <img src="docs/image/apple.png" width="30%" align="center" />
-    </th>
-    <th>
       <img src="docs/image/debian.png" width="30%" align="center" />
     </th>
   </tr>
 
   <tr>
-    <td width="30%">
-      <div align="center">
-        <a href="https://github.com/SpikeHD/dorion/releases/download/v6.6.0/Dorion_6.6.0_x64_en-US.msi ">x86_64</a>
-        <span>|</span>
-        <a href="https://github.com/SpikeHD/dorion/releases/download/v6.6.0/Dorion_6.6.0_arm64-setup.exe">ARM</a>
-      </div>
-    </td>
-    <td width="30%">
-      <div align="center">
-        <a href="https://github.com/SpikeHD/dorion/releases/download/v6.6.0/Dorion_6.6.0_x64.dmg">x86_64</a>
-        <span>|</span>
-        <a href="https://github.com/SpikeHD/dorion/releases/download/v6.6.0/Dorion_6.6.0_aarch64.dmg">ARM</a>
-      </div>
-    </td>
     <td width="30%">
       <div align="center">
         <a href="https://github.com/SpikeHD/dorion/releases/download/v6.6.0/Dorion_6.6.0_amd64.deb">x86_64</a>
@@ -113,13 +93,7 @@
 </details>
 
 > [!TIP]
-> Dorion can also be used portably or installed via [several package managers](#package-repositories).
-> You can find portable builds in the [releases](https://github.com/SpikeHD/dorion/releases/latest/) page. You can also [build](#building) Dorion yourself!
-
-> [!NOTE]
-> ***MacOS Users***: If opening Dorion gives you "Dorion.app is damaged and cannot be opened", MacOS is lying to you and you may just need to run `sudo xattr -rd com.apple.quarantine /Applications/Dorion.app`. Alternatively, you can open the **Privacy & Security** settings pane and scroll down to the **Security** section to remove the quarantine.
->
-> ***Windows Users***: Defender may think Dorion is a virus. This just happens sometimes, and if SmartScreen blocks it from running, click "More Info" and "Run Anyways". Feel free to scan Dorion with [Virustotal](https://www.virustotal.com/gui/home/upload)!
+> You can find portable builds in the [releases](https://github.com/SpikeHD/dorion/releases/latest/) page. You can also [build](#building) Vorion yourself
 
 # Table of Contents
 
@@ -135,7 +109,6 @@
 * [Troubleshooting](#troubleshooting)
   * [Things you Might be Asked to Provide](#things-you-might-be-asked-to-provide)
   * [General](#general)
-  * [Windows](#windows)
   * [Linux](#linux)
 * [TODO](#todo)
 * [Using Plugins, Extensions, and Themes](#using-plugins-extensions-and-themes)
@@ -145,18 +118,8 @@
 
 # Package Repositories
 
-I do **not** maintain any instances of Dorion in any package repositories myself, however some very kind people maintain some in their own spare time:
+I do **not** maintain any instances of the original Dorion nor Vorion in any package repositories myself, however some very kind people maintain some in their own spare time:
 
-* Windows:
-  * Shovel/Scoop (Maintained by [Small-Ku](https://github.com/Small-Ku/)): 
-    ```sh
-    scoop bucket add turbo 'https://github.com/Small-Ku/turbo-bucket.git'
-    scoop install turbo/dorion
-    ```
-  * WinGet (Maintained by [headquarter8302](https://github.com/headquarter8302))
-    ```sh
-    winget install --id SpikeHD.Dorion
-    ```
 * Linux:
   * Arch AUR (Maintained by [Refined7075](https://github.com/DarkCoder28))
     ```sh
@@ -166,15 +129,9 @@ I do **not** maintain any instances of Dorion in any package repositories myself
     ```sh
     nix-shell -p dorion
     ```
-* MacOS:
-  * Homebrew (Maintained by [psharma04](https://github.com/psharma04))
-    ```sh
-    brew tap psharma04/dorion
-    brew install --cask dorion
-    ```
-
+    
 > [!NOTE]
-> Maintaining Dorion in a different package repository that I don't know about? Feel free to [open a PR](https://github.com/SpikeHD/Dorion/pulls) to add it here!
+> Maintaining Vorion in a different package repository that I don't know about? Feel free to [open a PR](https://github.com/SpikeHD/Dorion/pulls) to add it here!
 
 # Features
 
@@ -190,7 +147,7 @@ I do **not** maintain any instances of Dorion in any package repositories myself
 
 ## Plugins
 
-Dorion comes with [shelter](https://github.com/uwu/shelter), so that should cover at least some plugin-related needs. You can also enable client mods like [Vencord](https://github.com/vendicated/vencord) inside the Dorion settings page.
+Vorion comes with [shelter](https://github.com/uwu/shelter), so that should cover at least some plugin-related needs. You can also enable client mods like [Vencord](https://github.com/vendicated/vencord) inside the Vorion settings page.
 If you want to install plugins not available within the Dorion settings page, ensure you are downloading a browser-compatible version.
 
 > [!NOTE]
@@ -203,29 +160,43 @@ If you want to install plugins not available within the Dorion settings page, en
 
 ## Themes
 
-Dorion supports all themes, BetterDiscord and others, with a [couple caveats](#known-issues).
+Vorion supports all themes, BetterDiscord and others, with a [couple caveats](#known-issues).
 
 [Jump to "Using Plugins and Themes"](#using-plugins-and-themes)
 
-# Platform Support
+# Platform Support - Original Dorion
 
 <div width="100%" align="center">
 
-| Feature                                        | Windows 10/11 | Windows 7[^1] | Linux            | MacOS           |
-|------------------------------------------------|---------------|---------------|------------------|-----------------|
-| Basics (logging in, navigation, text/DMs etc.) | ✓             | ~             | ~[^2]            | ✓               |
-| Voice                                          | ✓             | ~             | ✗[^3]            | ✓               |
-| Themes                                         | ✓             | ~             | ✓                | ✓               |
-| Shelter                                        | ✓             | ~             | ✓                | ✓               |
-| Dorion Plugins                                 | ✓             | ~             | ✓                | ✓               |
+| Feature                                        |Linux - in General|
+|------------------------------------------------|------------------|
+| Basics (logging in, navigation, text/DMs etc.) | ~[^1]            |
+| Voice                                          | ✗[^2]            |
+| Themes                                         | ✓                |
+| Shelter                                        | ✓                |
+| Vorion Plugins                                 | ✓                |
 
 </div>
 
-[^1]: Windows 7 support is possible by installing API extensions, such as VxKex. It could break at any point, and if this happens, I probably won't put much effort into fixing it (PRs always welcome of course!). You may also need to manually install [WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/) if Dorion doesn't open after installing!
+[^1]: Some people report Dorion freezing on Linux, particularly when GIFs are playing. This is, as far as the original Dorion team can tell, it is a bug in WebkitGTK.
 
-[^2]: Some people report Dorion freezing on Linux, particularly when GIFs are playing. This is, as far as I can tell, a bug in WebkitGTK.
+[^2]: Support for WebRTC is hidden behind a build-time flag that is not used in almost every distro. This will be available ~~when WebkitGTK ships with WebRTC support, or if you compile your own WebkitGTK.~~ I get around to adding Vorion's own WebRTC.
 
-[^3]: Support for WebRTC is hidden behind a build-time flag that is not used in almost every distro. This will be available when WebkitGTK ships with WebRTC support, or if you compile your own WebkitGTK.
+# Platform Support - Vorion
+
+<div width="100%" align="center">
+
+| Feature                                        | Debian      |
+|------------------------------------------------|-------------|
+| Basics (logging in, navigation, text/DMs etc.) | ~[^1]       |
+| Voice                                          | ✗[^3]       |
+| Themes                                         | ✓?          |
+| Shelter                                        | ✓?          |
+| Vorion Plugins                                 | ✓?          |
+
+</div>
+
+[^3]: Have yet to integrate WebRTC into Vorion.
 
 # Building
 
@@ -282,9 +253,9 @@ Dorion supports all themes, BetterDiscord and others, with a [couple caveats](#k
     pnpm dev
     ```
 
-All built files will be in `src-tauri/target/(release|debug)/`. Installation files (eg. `.msi`, `.deb`) are located in `bundle/`.
+All built files will be in `src-tauri/target/(release|debug)/`. Installation files (eg. `.deb`) are located in `bundle/`.
 
-# Known Issues
+# Known Issues (Original Dorion non-Windows)
 
 * (non-Windows) External images (UserBG, Decor, UserPFP, etc.) will not load
 * (non-Windows) Fonts/font-faces will not load
@@ -297,13 +268,11 @@ If you submit an issue or ask a question in the Discord, it's likely you will be
 
 * Devtools console output (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> <kbd>i</kbd>, then click "Console")
 * `latest.log` output
-  * Windows: `%appdata%\dorion\logs`
   * Linux: `~/.config/dorion/logs`
-  * MacOS: `~/Library/Application Support/dorion/logs`
 
 ## General
 
-### I can't see Dorion Settings!
+### I can't see Vorion Settings!
 * Check if `https://raw.githubusercontent.com/` URLs are being blocked by any system-wide adblockers/firewalls
 * Check the devtools console to see if there are any relevant errors
 
@@ -311,28 +280,17 @@ If you submit an issue or ask a question in the Discord, it's likely you will be
 (or a similar client crash)
 * Disable non-vital client mods/plugins/extensions and try again.
 * If you cannot get to the settings menu, you can delete the following items:
-  * Windows: `%appdata%\dorion\webdata` & `%appdata%\dorion\config.json`
-  * Linux: `~/.config/dorion/webdata` & `~/.config/dorion/config.json`
-  * MacOS: `~/Library/Application Support/dorion/webdata` & `~/Library/Application Support/dorion/config.json`
-
-## Windows
-### Dorion not opening
-* Try installing via MSI instead of the `.zip` file
-* Try using the `.zip` file instead of the MSI
-* (If using the `.zip` file) make sure all files were extracted properly. Ensure you are extracting Dorion and it's contents into it's own folder.
-* [Reinstall WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
-  * Fully uninstall and reinstall.
-  * If you are having trouble uninstalling it, or the installer says its already installed even though you uninstalled, try deleting this registry folder and uninstalling again `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\Clients\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}`
+  * Linux: `~/.config/vorion/webdata` & `~/.config/vorion/config.json`
 
 ## Linux
 ### White/blank/frozen screen
-* Run Dorion with either, or both, of the following environment variables:
+* Run Vorion with either, or both, of the following environment variables:
   ```sh
   WEBKIT_DISABLE_COMPOSITING_MODE=1
   WEBKIT_DISABLE_DMABUF_RENDERER=1
   ```
 
-# TODO
+# TODO - Original Dorion
 
 * [x] Multi-thread CSS processing
 * [x] Use resource files from within the binary itself instead of the filesystem
@@ -352,46 +310,43 @@ If you submit an issue or ask a question in the Discord, it's likely you will be
 * [ ] Move from `device_query` to `rdev` or `inputbot` (supports more keys. May also just attempt to contribute to `device_query`)
 * [x] API abstractions
 
+# TODO - Vorion
+
+* [ ] Integrate Vorion with its own WebRTC
+* [ ] Update README with more information regarding Vorion instead of Dorion
+ * [x] Initial (incomplete) changes of the README
+* [ ] Build pre-compiled binaries and put them in releases
+* [ ] See if anyone wants to help maintain a repo or PPA for Vorion
+
 # Using Plugins, Extensions, and Themes
 
 > [!TIP]
 > See the `examples` directory for examples of plugins, including how to include external code and themes.
 
-Plugins, extensions, and themes are relatively simple to use, the file structure looks like so on Windows:
+Plugins, extensions, and themes are relatively simple to use, the file structure looks like so on Linux:
 
 ```
-C:/Users/%USERNAME%/dorion/
-    ├── plugins/
-    |   └── plugin.js
-    ├── extensions/
-    |   └── some_unpacked_extension/
-    └── themes/
-        └── theme.css
-```
-
-and like so on Linux:
-
-```
-~/.config/dorion/
+~/.config/vorion/
     ├── plugins/
     |   └── plugin.js
     └── themes/
         └── theme.css
 ```
 
-so if you download a plugin, extension, or theme, just pop it into the `plugins`/`extensions`/`themes` folder. If you need help finding them, there are buttons in Dorion settings that'll take you where you need!
+so if you download a plugin, extension, or theme, just pop it into the `plugins`/`extensions`/`themes` folder. If you need help finding them, there are buttons in Vorion settings that'll take you where you need!
 
 > [!NOTE]
 > Themes can also be installed by clicking `Install Theme from Link` in Theme settings, if you prefer
 
 # Contributing
-
+### Original Dorion
 Issues, PRs, etc. are all welcome! For guidelines and tips, see [CONTRIBUTING.md](https://github.com/SpikeHD/Dorion/blob/main/CONTRIBUTING.md)
-
+### Vorion
+Help with makign Vorion work across distros is also welcome.
 ## Contributors
 
-<a href="https://github.com/spikehd/dorion/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=spikehd/dorion" />
+~~<a href="https://github.com/spikehd/dorion/graphs/contributors">~~
+  ~~<img src="https://contrib.rocks/image?repo=spikehd/dorion" />~~
 </a>
 
 # Screenshots
